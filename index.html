@@ -252,7 +252,7 @@
     <!-- Destination Popup Start -->
     <div class="modal fade" id="destinationModal" tabindex="-1" role="dialog" aria-labelledby="destinationModalLabel"
         aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header text-center"> <!-- Added class "text-center" -->
                     <h5 class="modal-title" id="destinationModalLabel" style="font-size: 24px;">Destination Details</h5>
@@ -333,10 +333,13 @@
                 <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Top Treks</h6>
                 <h1>Discover Bhutan's Majestic Trails</h1>
             </div>
+
             <div class="row">
                 <!-- Trek Item: Tiger's Nest Trek -->
                 <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="package-item bg-white mb-2">
+                    <div class="package-item bg-white mb-2 " data-toggle="modal" data-target="#destinationModal"
+                        onclick="loadDestinationContent(`Tiger's Nest Monastery Trek`)" style="cursor: pointer;"
+                        onmouseover="this.style.cursor='pointer'">
                         <img class="img-fluid" src="img/tigers-nest-trek.webp" alt="Tiger's Nest Trek">
                         <div class="p-4">
                             <div class="d-flex justify-content-between mb-3">
@@ -345,8 +348,7 @@
                                 <small class="m-0"><i class="fa fa-calendar-alt text-primary mr-2"></i>2-3 hours</small>
                                 <small class="m-0"><i class="fa fa-user text-primary mr-2"></i>Group</small>
                             </div>
-                            <a class="h5 text-decoration-none"
-                                href="https://www.culturaobscura.com/climbing-tigers-nest/" target="_blank">Tiger's Nest
+                            <a class="h5 text-decoration-none">Tiger's Nest
                                 Monastery Trek</a>
 
                         </div>
@@ -354,7 +356,8 @@
                 </div>
                 <!-- Trek Item: Jomolhari Trek -->
                 <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="package-item bg-white mb-2">
+                    <div class="package-item bg-white mb-2" data-toggle="modal" data-target="#destinationModal"
+                        onclick="loadDestinationContent(`Jomolhari Base Camp Trek`)" style="cursor: pointer;">
                         <img class="img-fluid" src="img/jomolhari-trek.webp" alt="Jomolhari Trek">
                         <div class="p-4">
                             <div class="d-flex justify-content-between mb-3">
@@ -363,16 +366,15 @@
                                 <small class="m-0"><i class="fa fa-calendar-alt text-primary mr-2"></i>11 days</small>
                                 <small class="m-0"><i class="fa fa-user text-primary mr-2"></i>Group</small>
                             </div>
-                            <a class="h5 text-decoration-none"
-                                href="https://followalice.com/knowledge/bhutans-jomolhari-trek-route"
-                                target="_blank">Jomolhari Base Camp Trek</a>
 
+                            <a class="h5 text-decoration-none">Jomolhari Base Camp Trek</a>
                         </div>
                     </div>
                 </div>
                 <!-- Trek Item: Druk Path Trek -->
                 <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="package-item bg-white mb-2">
+                    <div class="package-item bg-white mb-2" data-toggle="modal" data-target="#destinationModal"
+                        onclick="loadDestinationContent(`Druk Path Trek`)" style="cursor: pointer;">
                         <img class="img-fluid" src="img/druk-path-trek.webp" alt="Druk Path Trek">
                         <div class="p-4">
                             <div class="d-flex justify-content-between mb-3">
@@ -381,8 +383,8 @@
                                 <small class="m-0"><i class="fa fa-calendar-alt text-primary mr-2"></i>4-6 days</small>
                                 <small class="m-0"><i class="fa fa-user text-primary mr-2"></i>Group</small>
                             </div>
-                            <a class="h5 text-decoration-none" href="https://www.trekking-in-bhutan.com/druk-path-trek/"
-                                target="_blank">Druk Path Trek</a>
+
+                            <a class="h5 text-decoration-none">Druk Path Trek</a>
 
                         </div>
                     </div>
@@ -538,6 +540,169 @@
                     content = "<img src='img/destination-6.webp' alt='Paro  Image'  class='img-fluid rounded mx-auto d-block' style='max-width: 70%;' >" +
                         "<p><br>Discover the timeless beauty of Paro with our curated tour. Visit the iconic Paro Taktsang (Tiger's Nest) monastery, perched precariously on a cliffside, and delve into its mystical history. Explore the historic Paro Dzong, a fortress-monastery that stands as a testament to Bhutan's rich architectural heritage. Wander through the charming streets of Paro town, adorned with traditional Bhutanese buildings and bustling markets. Experience the warmth of Bhutanese hospitality as you interact with local communities and partake in cultural festivities.<p>Embark on an unforgettable trek to Paro Taktsang, one of Bhutan's most revered pilgrimage sites. Trek through dense forests and rocky terrain, ascending towards the legendary monastery perched high above the valley. Marvel at the awe-inspiring views of Paro valley below as you approach the sacred site. Explore the intricate temples and meditation caves of Taktsang, steeped in centuries of spiritual tradition. With our experienced guides leading the way, this trek promises an extraordinary journey to the heart of Bhutan's spiritual heritage. <p>Each of these tours and treks offers a unique opportunity to explore the diverse landscapes, rich culture, and spiritual heritage of Bhutan. Whether you're seeking adventure in the mountains or tranquility in the valleys, Bhutan promises an unforgettable experience for every traveler.</p>";
                     break;
+                case "Tiger's Nest Monastery Trek":
+                    content = `
+                    <div>
+ 
+  <p>The Tiger's Nest Monastery is one of Bhutan's most iconic and sacred sites. Here are details about the trek to Tiger's Nest Monastery:</p>
+
+  <div class="section">
+    <h6 class="section-title">Location:</h6>
+    <p class="section-content">Paro Valley, Bhutan.</p>
+  </div>
+
+  <div class="section">
+    <h6 class="section-title">Altitude:</h6>
+    <p class="section-content">The monastery sits at an elevation of about 3,120 meters (10,240 feet) above sea level.</p>
+  </div>
+
+  <div class="section">
+    <h6 class="section-title">Duration:</h6>
+    <p class="section-content">The duration of the trek can vary depending on your pace and fitness level. On average, it takes about 4 to 6 hours for a round trip trek, including time spent at the monastery. Some may complete it faster, while others may take longer.</p>
+  </div>
+
+  <div class="section">
+    <h6 class="section-title">Trail Difficulty:</h6>
+    <p class="section-content">The trek is considered moderately challenging. The trail involves steep ascents and descents, with some sections consisting of stone steps. The altitude can also be a factor for some visitors.</p>
+  </div>
+
+  <div class="section">
+    <h6 class="section-title">Route:</h6>
+    <p class="section-content">The trek to Tiger's Nest Monastery typically starts from the base of the mountain, near the town of Paro. From there, you'll follow a well-marked trail through pine forests and across streams, gradually ascending towards the monastery. Along the way, there are several viewpoints that offer stunning vistas of the monastery clinging to the cliffside.</p>
+  </div>
+
+  <div class="section">
+    <h6 class="section-title">Highlights:</h6>
+    <ol class="highlight-list">
+      <li><strong>Scenic Beauty:</strong> The trail offers breathtaking views of the surrounding mountains and valleys, making it a memorable experience for nature lovers and photographers.</li>
+      <li><strong>Cultural Experience:</strong> Tiger's Nest Monastery is deeply ingrained in Bhutanese culture and Buddhism. Visiting the monastery provides insight into the country's spiritual heritage.</li>
+      <li><strong>Historical Significance:</strong> Legend has it that Guru Padmasambhava (also known as Guru Rinpoche) flew to this location on the back of a tigress, hence the name "Tiger's Nest." The monastery was built around the cave where he meditated for three years, three months, three weeks, three days, and three hours.</li>
+    </ol>
+  </div>
+
+  <div class="section">
+    <h6 class="section-title">Tips for the Trek:</h6>
+    <ol class="tip-list">
+      <li><strong>Start Early:</strong> It's advisable to start the trek early in the morning to avoid midday heat and crowds.</li>
+      <li><strong>Wear Suitable Clothing:</strong> Dress in layers as the weather can change quickly, and wear sturdy hiking shoes.</li>
+      <li><strong>Stay Hydrated:</strong> Carry an ample supply of water and snacks for the trek.</li>
+      <li><strong>Respect the Culture:</strong> Visitors should dress modestly and adhere to the monastery's rules and customs.</li>
+      <li><strong>Take Your Time:</strong> Pace yourself and take breaks as needed, especially if you're not accustomed to hiking at high altitudes.</li>
+    </ol>
+  </div>
+
+  <p class="popup-conclusion">Overall, trekking to Tiger's Nest Monastery is not just about reaching a destination; it's about immersing yourself in Bhutan's natural beauty, spirituality, and cultural heritage.</p>
+</div>        `
+                    break;
+                case "Jomolhari Base Camp Trek":
+                    content = `<div >
+ 
+  <p>The Jomolhari Base Camp Trek is a popular trekking route in Bhutan, offering stunning views of the Himalayas and the opportunity to experience Bhutan's unique culture. Here are details about the trek:</p>
+
+  <div class="section">
+    <h6 class="section-title">Location:</h6>
+    <p class="section-content">The trek starts from Paro Valley and leads to the base camp of Mount Jomolhari (also spelled Chomolhari), which is located on the border between Bhutan and Tibet.</p>
+  </div>
+
+  <div class="section">
+    <h6 class="section-title">Altitude:</h6>
+    <p class="section-content">The trek reaches altitudes of over 4,000 meters (13,000 feet) above sea level, with the highest point being the Jomolhari Base Camp at approximately 4,080 meters (13,386 feet).</p>
+  </div>
+
+  <div class="section">
+    <h6 class="section-title">Duration:</h6>
+    <p class="section-content">The duration of the trek is typically 7 to 9 days, depending on the chosen route and itinerary. This includes trekking to the base camp and returning to Paro.</p>
+  </div>
+
+  <div class="section">
+    <h6 class="section-title">Trail Difficulty:</h6>
+    <p class="section-content">The Jomolhari Base Camp Trek is considered moderately challenging. The trail involves both steep ascents and descents, crossing high mountain passes and traversing rugged terrain. Altitude sickness can be a concern for some trekkers.</p>
+  </div>
+
+  <div class="section">
+    <h6 class="section-title">Route:</h6>
+    <p class="section-content">The trek usually follows a route that passes through picturesque valleys, alpine meadows, and remote villages. Trekkers often camp in designated camping areas along the trail, with opportunities to interact with local communities and experience Bhutanese hospitality.</p>
+  </div>
+
+  <div class="section">
+    <h6 class="section-title">Highlights:</h6>
+    <ol class="highlight-list">
+      <li><strong>Mountain Views:</strong> The trek offers breathtaking views of Mount Jomolhari and other snow-capped peaks of the Himalayas.</li>
+      <li><strong>Wildlife:</strong> The region is home to various species of wildlife, including the elusive snow leopard, blue sheep, Himalayan marmots, and a variety of bird species.</li>
+      <li><strong>Cultural Immersion:</strong> Trekkers have the chance to visit traditional Bhutanese villages, monasteries, and temples along the route, gaining insight into Bhutan's rich cultural heritage.</li>
+      <li><strong>Natural Beauty:</strong> The trek takes you through pristine landscapes adorned with rhododendron forests, alpine lakes, and cascading waterfalls, offering ample opportunities for photography and relaxation.</li>
+    </ol>
+  </div>
+
+  <div class="section">
+    <h6 class="section-title">Tips for the Trek:</h6>
+    <ol class="tip-list">
+      <li><strong>Acclimatize:</strong> Spend a few days in Paro or another lower-altitude location to acclimatize to the higher elevation before starting the trek.</li>
+      <li><strong>Stay Hydrated:</strong> Drink plenty of water to prevent altitude sickness and stay hydrated throughout the trek.</li>
+      <li><strong>Pack Wisely:</strong> Pack appropriate clothing, including layers for changing weather conditions, and essential trekking gear such as sturdy hiking boots, a warm sleeping bag, and a good-quality backpack.</li>
+      <li><strong>Respect Nature and Culture:</strong> Follow Leave No Trace principles, respect local customs and traditions, and minimize your impact on the environment.</li>
+      <li><strong>Engage with Locals:</strong> Take the opportunity to interact with local villagers and learn about their way of life, customs, and traditions.</li>
+    </ol>
+  </div>
+
+  <p class="popup-conclusion">The Jomolhari Base Camp Trek offers a memorable adventure in the heart of the Himalayas, combining stunning natural beauty with cultural immersion and a sense of accomplishment.</p>
+</div>
+`
+                    break;
+                case "Druk Path Trek":
+                    content = `
+                    <div >
+
+  <div class="section">
+    <h6 class="section-title">Location:</h6>
+    <p class="section-content">The trek typically starts from Paro and ends in Thimphu, the capital city of Bhutan. The trail passes through the beautiful landscapes of the Himalayas.</p>
+  </div>
+
+  <div class="section">
+    <h6 class="section-title">Altitude:</h6>
+    <p class="section-content">The trek reaches altitudes of up to 4,200 meters (13,780 feet) above sea level, with several high mountain passes along the route.</p>
+  </div>
+
+  <div class="section">
+    <h6 class="section-title">Duration:</h6>
+    <p class="section-content">The duration of the trek is usually 4 to 6 days, depending on the specific itinerary and pace of the trekking group.</p>
+  </div>
+
+  <div class="section">
+    <h6 class="section-title">Trail Difficulty:</h6>
+    <p class="section-content">The Druk Path Trek is considered moderately challenging, suitable for trekkers with a moderate level of fitness. The trail involves ascending and descending mountain passes, with some sections of steep terrain.</p>
+  </div>
+
+  <div class="section">
+    <h6 class="section-title">Route:</h6>
+    <p class="section-content">The trek follows a scenic route that passes through rhododendron forests, alpine meadows, and yak herder camps. Trekkers often camp in designated campsites along the trail, offering opportunities to experience Bhutan's natural beauty and serene surroundings.</p>
+  </div>
+
+  <div class="section">
+    <h6 class="section-title">Highlights:</h6>
+    <ol class="highlight-list">
+      <li><strong>Mountain Views:</strong> The trek offers panoramic views of the snow-capped peaks of the Himalayas, including Mount Gangkar Puensum, the highest peak in Bhutan.</li>
+      <li><strong>Lakes:</strong> Trekkers have the chance to visit pristine alpine lakes, such as Jimilang Tsho and Simkota Tsho, which are known for their clear waters and scenic surroundings.</li>
+      <li><strong>Cultural Encounters:</strong> Along the trekking route, trekkers can visit remote villages, monasteries, and temples, interacting with local communities and experiencing Bhutanese culture and traditions.</li>
+      <li><strong>Wildlife:</strong> The region is home to various species of wildlife, including Himalayan blue sheep, musk deer, and various bird species, offering opportunities for wildlife spotting and birdwatching.</li>
+    </ol>
+  </div>
+
+  <div class="section">
+    <h6 class="section-title">Tips for the Trek:</h6>
+    <ol class="tip-list">
+      <li><strong>Acclimatize:</strong> Spend a day or two in Paro or Thimphu before starting the trek to acclimatize to the altitude.</li>
+      <li><strong>Stay Hydrated:</strong> Drink plenty of water and stay hydrated throughout the trek, especially at higher altitudes.</li>
+      <li><strong>Layer Clothing:</strong> Bring appropriate clothing layers for changing weather conditions, including warm layers for cold evenings and mornings.</li>
+      <li><strong>Pack Essentials:</strong> Pack essential trekking gear, including a sturdy pair of hiking boots, a warm sleeping bag, a lightweight tent, and a backpack.</li>
+      <li><strong>Respect Nature and Culture:</strong> Follow Leave No Trace principles, respect local customs and traditions, and minimize your impact on the environment.</li>
+    </ol>
+  </div>
+
+  <p class="popup-conclusion">The Druk Path Trek offers an unforgettable adventure through the stunning landscapes and cultural heritage of Bhutan, providing trekkers with a unique and enriching experience.</p>
+</div>`
+                    break;
+
                 default:
                     content = "<p>No content available for this destination.</p>";
             }
