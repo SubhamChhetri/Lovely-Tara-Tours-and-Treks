@@ -10954,23 +10954,134 @@ h6,
 
 @media (max-width: 767.98px) {
   .paddingmobile {
-      padding: 20px;
+    padding: 20px;
   }
 }
+
 @media (max-width: 576px) {
   .navbar-brand h4 {
-      font-size: 18px; /* Adjust the font size as needed */
+    font-size: 18px;
+    /* Adjust the font size as needed */
   }
-  .mobilesize h4{
-    font-size: 18px; /* Adjust the font size as needed */
+
+  .mobilesize h4 {
+    font-size: 18px;
+    /* Adjust the font size as needed */
 
   }
+
   .mobilesize {
-    font-size: 10px; /* Adjust the font size as needed */
+    font-size: 10px;
+    /* Adjust the font size as needed */
 
-  
+
   }
+
   .copyright-text {
     font-size: 10px;
+  }
 }
+
+
+
+.section {
+  margin-bottom: 20px;
+}
+
+.section-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.section-content {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #555;
+}
+
+.highlight-list,
+.tip-list {
+  padding-left: 20px;
+}
+
+.highlight-list li,
+.tip-list li {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.popup-conclusion {
+  font-size: 14px;
+  font-style: italic;
+  color: #666;
+  text-align: center;
+  margin-top: 20px;
+}
+
+
+@media (min-width: 1200px) {
+
+  /* Large devices (lg) and desktops */
+  .tour-col {
+    height: 500px;
+    /* Adjust the height as per your requirement */
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+
+  /* Large devices (lg) and desktops */
+  .tour-col {
+    height: 620px;
+    /* Adjust the height as per your requirement */
+  }
+}
+
+
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+  /* Medium devices (md) */
+  .tour-col {
+    height: 1000px;
+    /* Adjust the height as per your requirement */
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+
+  /* Small devices (sm) */
+  .tour-col {
+    height: 1100px;
+    /* Adjust the height as per your requirement */
+  }
+
+}
+
+@media (min-width: 575.98px) and (max-width: 576.98px) {
+
+  /* Extra small devices (xs) */
+  .tour-col {
+    height: 1150px;
+    /* Adjust the height as per your requirement */
+  }
+
+}
+
+/* Normal state */
+.prev-icon {
+  color: #007bff;
+  /* Set the color of the icon */
+  transition: color 0.3s;
+  /* Add transition for smooth effect */
+}
+
+/* Hover state */
+.prev:hover .prev-icon {
+  color: #6cb2eb;
+  /* Set the lighter color on hover */
 }
